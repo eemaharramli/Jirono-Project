@@ -1,0 +1,80 @@
+header {
+    display: block;
+    max-width: 1140px;
+    margin: 0 auto;
+    position: relative;
+    height: 80px;
+    align-items: center;
+    z-index: 2;
+    .menu {
+        align-items: center;
+        .logo:hover {
+            cursor: pointer;
+        }
+        .menu--list {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            li {
+                font-size: 14px;
+                color: $li-color;
+                transition: 0.3s color linear;
+                a {
+                    color: #3b566e;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            ul {
+                margin-top: 10px;
+                position: absolute;
+                padding-left: 0;
+                transition: 0.3s linear all;
+                opacity: 0;
+                li {
+                    position: relative;
+                    width: 200px;
+                    margin-bottom: 1px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    padding-left: 10px;
+                    background-color: #fff;
+                    transition: 0.2s linear all;
+                    border-bottom: 1px solid #f5f5f5;
+                    a {
+                        color: #3b566e;
+                    }
+                    &:hover {
+                        padding-left: 14px;
+                        background-color: #f5f5f5;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 0;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background-color: $main-color;
+                    }
+                    &:hover::before {
+                        width: 3px;
+                    }
+                }
+            }
+        }
+        .credentials a {
+            @include button-light;
+            &:first-child {
+                margin-right: 10px;
+                color: $main-color;
+                background-color: #ffffff;
+                &:hover {
+                    background-color: $main-color;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}

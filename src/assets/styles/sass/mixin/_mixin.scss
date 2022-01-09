@@ -1,0 +1,46 @@
+@mixin button-light{
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 5px 30px;
+  border-radius: 5px;
+  border: 2px solid $main-color;
+  color: #fff;
+  background-color: $main-color;
+  transition: .1s linear all;
+  &:hover{
+    background-color: #fff;
+    color: $main-color;
+    cursor: pointer;
+  }
+}
+
+@mixin button-dark{
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 5px 30px;
+  border-radius: 5px;
+  border: 2px solid $main-color;
+  color: #fff;
+  background-color: $main-color;
+  transition: .2s linear all;
+  &:hover{
+    background-color: $buttons-dark-hover;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+@mixin title{
+  h3{
+    margin-bottom: 50px;
+    font-weight: 200;
+  }
+  > div{
+      margin: 0 auto;
+      width: 500px;
+      margin-bottom: 30px;
+      span{
+          color: $solutions-span-color;
+      }
+  }
+}

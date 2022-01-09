@@ -1,0 +1,90 @@
+section#team{
+    padding-top: 100px;
+    padding-bottom: 150px;
+    position: relative;
+    .team__header{
+
+        text-align: center;
+        h3{
+            margin-bottom: 50px;
+            font-weight: 200;
+        }
+        @include title;
+    }
+    .team__footer{
+        background-color: #fff;
+        border-radius: $border-radius-size;
+        position: relative;
+        height: 270px;
+        &:hover{
+            .team__footer--title{
+                min-height: 120px;
+            }
+            i{
+                color: #fff !important;
+            }
+            .team__footer--img{
+                bottom: -55%;
+            }
+        }
+        &--title{
+            background-color: $main-color;
+            text-align: center;
+            min-height: 70px;
+            padding-top: 10px;
+            border-top-left-radius: $border-radius-size;
+            border-top-right-radius: $border-radius-size;
+            transition: .3s linear all;
+            position: absolute;
+            width: 100%;
+            span{
+                color: #fff;
+                display: block;
+                font-weight: 200;
+                font-size: 12px;
+                &:first-of-type{
+                    margin-bottom: 5px;
+                    font-size: 16px;
+                }
+            }
+        }
+        &--text{
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 80%;
+            color: $solutions-span-color;
+        }
+        .social-hubs{
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            display: flex;
+            justify-content: space-between;
+            width: 150px;
+            i{
+                color: $main-color;
+                transition: .3s linear all;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        &--img{
+            position: absolute;
+            bottom: -50%;
+            left: 50%;
+            transform: translate(-50%, -80%);
+            transition: .3s linear all;
+            img{
+                border: $border-radius-size solid #fff;
+                border-radius: 100%;
+            }
+        }
+    }
+}

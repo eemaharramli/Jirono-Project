@@ -1,0 +1,105 @@
+section#cloud{
+    background-color: $section-cloud-background;
+    .cloud{
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 50px 0;
+        h2{
+            color: #3B566E;
+            margin: 0;
+            padding: 0;
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        h2 + span{
+            color: $solutions-span-color;
+            margin-bottom: 20px;
+            display: block;
+            font-weight: 300;
+            font-size: 20px;
+        }
+        &__inner{
+            display: flex;
+            &-footer .row {
+                margin: 0;
+                > div{
+                padding: 10px 0;
+                border-radius: 5px;
+                }
+            }
+            &-wrapper{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                > div{
+                    max-width: 49%;
+                    margin-bottom: 30px;
+                    padding: 10px 0;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    position: relative;
+                    overflow: hidden;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    &:hover span{
+                        left: 35px;
+                    }
+                    &:hover .cloud__inner-wrapper--rotate{
+                        background-color: $main-color;
+                        left: -35px;
+                    }
+                    &:hover{
+                        i{
+                            color: #fff;
+                        }
+                    }
+                }
+                &--rotate{
+                    width: 100px;
+                    height: 100px;
+                    transform: rotate(45deg);
+                    background-color: #F7FAFD;
+                    position: absolute;
+                    left: -40px;
+                    top: 0;
+                    transition: .2s linear all;
+                }
+                &--rotate.active{
+                    background-color: $main-color;
+                    left: -35px;
+                }
+                i{
+                    position: absolute;
+                    height: 100%;
+                    top: -10px;
+                    left: 30px;
+                    padding: 15px 30px;
+                    color: #3B566E;
+                    transform: rotate(-45deg);
+                    font-size: 14px;
+                }
+                i.active{
+                    color: #fff;
+                }
+                a{
+                    font-weight: 200;
+                    max-width: 50%;
+                    position: relative;
+                    left: 50px;
+                    top: 0;
+                }
+                span{
+                    transition: .2s linear all;
+                    position: relative;
+                    left: 30px;
+                }
+                span.active{
+                    left: 35px;
+                }
+            }
+        }
+    }
+}

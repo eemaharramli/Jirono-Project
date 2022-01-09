@@ -1,0 +1,42 @@
+section#blog{
+    background-color: $section-cloud-background;
+    padding: 100px 0;
+    .blog__header{
+        text-align: center;
+        @include title
+    }
+    .blog__inner{
+        max-width: 100%;
+        text-align: center;
+        &--img{
+            background-size: cover;
+            overflow: hidden;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 250px;
+            margin: 30px 0;
+            &:nth-child(1){
+                background-image: url('../../images/blog/1.jpeg');
+            }
+        }
+        a.title{
+            color: $li-color;
+            width: 80%;
+            transition: .2s linear all;
+            display: block;
+            margin: 0 auto;
+            &:hover{
+                color: $main-color;
+            }
+        }
+        p{
+            color: #6F8BA4;
+            font-size: 14px;
+        }
+        a.link{
+            display: inline-block;
+            @include button-dark;
+            padding: 10px 30px;
+        }
+    }
+}
