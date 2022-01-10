@@ -6,6 +6,10 @@ footer{
     font-size: 14px;
     line-height: 26px;
     letter-spacing: 1px;
+    .footer{
+        max-width: 1140px;
+        margin: 0 auto;
+    }
     h4{
         font-weight: 300;
         font-size: 18px;

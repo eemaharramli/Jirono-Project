@@ -1,0 +1,25 @@
+section#questions{
+    padding: 100px 0;
+    .questions{
+        max-width: 1140px;
+        margin: 0 auto;
+        h3{
+            font-weight: 400;
+            font-size: 30px;
+            color: $main-color;
+            margin-bottom: 20px;
+        }
+        p{
+            color: $main-text-color;
+            line-height: 28px;
+            font-size: 16px;
+            margin-bottom: 35px;
+            letter-spacing: .8px
+        }
+        a{
+            @include button-dark;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+}
