@@ -1,0 +1,101 @@
+section#contact{
+    padding: 100px;
+    .contact{
+        max-width: 1140px;
+        margin: 0 auto;
+        &__inner{
+            &--credentials{
+                position: relative;
+                background-color: $main-color;
+                padding: 50px;
+                width: 80%;
+                margin: 0 auto;
+                &_item{
+                    position: relative;
+                    i{
+                        color: #fff;
+                        position: absolute;
+                        top: 10%;
+                        left: -25px;
+                    }
+                    .info {
+                        display: inline-block;
+                        span{
+                            color: #fff;
+                            &:nth-of-type(2){
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                .social-hubs{
+                    text-align: center;
+                    margin-top: 30px;
+                    i{
+                        color: #fff;
+                        font-size: 22px;
+                        margin-right: 10px;
+                        &:lastc{
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &__form{
+            padding: 50px 0;
+            h3{
+                color: $solutions-span-color;
+                font-size: 20px;
+                font-weight: 500;
+            }
+            p{
+                color: $solutions-span-color;
+                font-weight: 300;
+                line-height: 2.1;
+            }
+            &-table{
+                width: 100%;
+                &_credentials{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 40px;
+                    input{
+                        width: 48%;
+                        padding: 10px 0 10px 25px;
+                        transition: .2s linear all;
+                        background-color: #fff;
+                        border: none;
+                        border-radius: $border-radius-size;
+                        &:focus{
+                            padding-left: 40px;
+                        }
+                    }
+                }
+                &_text{
+                    width: 100%;
+                    margin-bottom: 40px;
+                    textarea{
+                        width: 100%;
+                        height: 150px;
+                        resize: none;
+                        padding: 20px;
+                        border: none;
+                        border-radius: 5px;
+                        transition: .2s linear all;
+                        &:focus{
+                            padding-left: 30px;
+                        }
+                    }
+                }
+                &_send{
+                    a{
+                        @include button-dark;
+                        padding: 10px 60px;
+                    }
+                }
+            }
+        }
+    }
+}

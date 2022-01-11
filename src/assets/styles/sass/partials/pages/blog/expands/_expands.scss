@@ -195,9 +195,9 @@ section#expands{
                 height: 50px;
                 border: none;
                 padding-left: 20px;
-                transition: .3s linear all;
-                &:hover{
-                    padding-left: 40px;
+                transition: .2s linear all;
+                &:focus{
+                    padding-left: 30px;
                 }
             }
             a{
