@@ -1,9 +1,10 @@
 #solutions {
     position: relative;
     z-index: 1;
+    overflow: hidden;
+    max-width: 100%;
 }
 .solutions {
-    display: block;
     max-width: 1140px;
     margin: 0 auto;
     margin-top: 50px;
@@ -151,6 +152,7 @@
         text-align: center;
         background-color: #ffffff;
         border-radius: 5px;
+        margin-bottom: 20px;
         transition: 0.2s linear all;
         &:hover {
             background-color: $main-color;

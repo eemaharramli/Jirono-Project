@@ -131,10 +131,11 @@ header .menu .credentials a:first-child:hover {
 #solutions {
   position: relative;
   z-index: 1;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .solutions {
-  display: block;
   max-width: 1140px;
   margin: 0 auto;
   margin-top: 50px;
@@ -294,6 +295,7 @@ header .menu .credentials a:first-child:hover {
   text-align: center;
   background-color: #ffffff;
   border-radius: 5px;
+  margin-bottom: 20px;
   transition: 0.2s linear all;
 }
 .solutions .solutions__types--wrapper:hover {
@@ -375,8 +377,7 @@ section#cloud .cloud__inner-wrapper {
   justify-content: space-between;
   align-items: center;
 }
-section#cloud .cloud__inner-wrapper > div {
-  max-width: 49%;
+section#cloud .cloud__inner-wrapper--list {
   margin-bottom: 30px;
   padding: 10px 0;
   background-color: #fff;
@@ -385,17 +386,17 @@ section#cloud .cloud__inner-wrapper > div {
   overflow: hidden;
   border: 1px solid #E5E9F7;
 }
-section#cloud .cloud__inner-wrapper > div:hover {
+section#cloud .cloud__inner-wrapper--list:hover {
   cursor: pointer;
 }
-section#cloud .cloud__inner-wrapper > div:hover span {
+section#cloud .cloud__inner-wrapper--list:hover span {
   left: 35px;
 }
-section#cloud .cloud__inner-wrapper > div:hover .cloud__inner-wrapper--rotate {
+section#cloud .cloud__inner-wrapper--list:hover .cloud__inner-wrapper--rotate {
   background-color: #585CE9;
   left: -35px;
 }
-section#cloud .cloud__inner-wrapper > div:hover i {
+section#cloud .cloud__inner-wrapper--list:hover i {
   color: #fff;
 }
 section#cloud .cloud__inner-wrapper--rotate {
@@ -440,6 +441,14 @@ section#cloud .cloud__inner-wrapper span {
 section#cloud .cloud__inner-wrapper span.active {
   left: 35px;
 }
+section#cloud .cloud__img {
+  width: 100%;
+  padding-bottom: 40px;
+  text-align: center;
+}
+section#cloud .cloud__img img {
+  max-width: 100%;
+}
 
 section#design {
   background-color: #F7FAFD;
@@ -480,8 +489,7 @@ section#design .design__inner-wrapper {
   justify-content: space-between;
   align-items: center;
 }
-section#design .design__inner-wrapper > div {
-  max-width: 49%;
+section#design .design__inner-wrapper--list {
   margin-bottom: 30px;
   padding: 10px 0;
   background-color: #fff;
@@ -489,17 +497,17 @@ section#design .design__inner-wrapper > div {
   position: relative;
   overflow: hidden;
 }
-section#design .design__inner-wrapper > div:hover {
+section#design .design__inner-wrapper--list:hover {
   cursor: pointer;
 }
-section#design .design__inner-wrapper > div:hover span {
+section#design .design__inner-wrapper--list:hover span {
   left: 35px;
 }
-section#design .design__inner-wrapper > div:hover .design__inner-wrapper--rotate {
+section#design .design__inner-wrapper--list:hover .design__inner-wrapper--rotate {
   background-color: #585CE9;
   left: -35px;
 }
-section#design .design__inner-wrapper > div:hover i {
+section#design .design__inner-wrapper--list:hover i {
   color: #fff;
 }
 section#design .design__inner-wrapper--rotate {
@@ -544,6 +552,15 @@ section#design .design__inner-wrapper span {
 section#design .design__inner-wrapper span.active {
   left: 35px;
 }
+section#design .design__img {
+  width: 100%;
+  padding-top: 40px;
+  text-align: center;
+}
+section#design .design__img img {
+  max-width: 100%;
+  margin-bottom: 30px;
+}
 
 section#parallax {
   position: relative;
@@ -555,34 +572,35 @@ section#parallax {
   height: 270px;
   overflow: hidden;
 }
-section#parallax > div {
-  text-align: center;
-  position: absolute;
+section#parallax .parallax {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+section#parallax .parallax__inner {
+  position: relative;
   z-index: 2;
   transition: 0.3s linear all;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-section#parallax .parallax__inner {
-  position: absolute;
-  top: -80px;
+  transform: translateY(-50%);
+  width: 100%;
   transition: 0.2s linear all;
+  text-align: center;
+  margin-bottom: 20px;
 }
 section#parallax .parallax__inner:hover {
   top: -90px;
 }
-section#parallax span {
+section#parallax .parallax span {
   font-size: 22px;
   font-weight: 200;
   display: block;
   color: #fff;
 }
-section#parallax span.project-count {
+section#parallax .parallax span.project-count {
   font-size: 24px;
   font-weight: 300;
 }
-section#parallax::after {
+section#parallax .parallax::after {
   content: "";
   position: absolute;
   top: 0;
@@ -592,17 +610,17 @@ section#parallax::after {
   background-color: #585CE9;
   opacity: 0.8;
 }
-section#parallax .parallax-web p {
+section#parallax .parallax .parallax-web p {
   color: #fff;
   font-size: 20px;
 }
-section#parallax .parallax-web span {
+section#parallax .parallax .parallax-web span {
   display: inline-block;
   font-size: 20px;
   text-decoration: underline;
   font-weight: 500;
 }
-section#parallax .parallax-web a {
+section#parallax .parallax .parallax-web a {
   text-transform: uppercase;
   font-size: 12px;
   padding: 5px 30px;
@@ -618,6 +636,10 @@ section#team {
   padding-bottom: 150px;
   position: relative;
 }
+section#team .team {
+  max-width: 1140px;
+  margin: 0 auto;
+}
 section#team .team__header {
   text-align: center;
 }
@@ -632,6 +654,7 @@ section#team .team__header h3 {
 section#team .team__header > div {
   margin: 0 auto;
   width: 500px;
+  max-width: 100%;
   margin-bottom: 30px;
 }
 section#team .team__header > div span {
@@ -642,6 +665,7 @@ section#team .team__footer {
   border-radius: 5px;
   position: relative;
   height: 270px;
+  margin-bottom: 60px;
 }
 section#team .team__footer:hover .team__footer--title {
   min-height: 120px;
@@ -726,6 +750,7 @@ section#pricing .pricing__header h3 {
 section#pricing .pricing__header > div {
   margin: 0 auto;
   width: 500px;
+  max-width: 100%;
   margin-bottom: 30px;
 }
 section#pricing .pricing__header > div span {
@@ -823,6 +848,10 @@ section#blog {
   background-color: #F7FAFD;
   padding: 100px 0;
 }
+section#blog .blog {
+  max-width: 1140px;
+  margin: 0 auto;
+}
 section#blog .blog__header {
   text-align: center;
 }
@@ -833,6 +862,7 @@ section#blog .blog__header h3 {
 section#blog .blog__header > div {
   margin: 0 auto;
   width: 500px;
+  max-width: 100%;
   margin-bottom: 30px;
 }
 section#blog .blog__header > div span {
@@ -841,6 +871,7 @@ section#blog .blog__header > div span {
 section#blog .blog__inner {
   max-width: 100%;
   text-align: center;
+  margin-bottom: 30px;
 }
 section#blog .blog__inner--img {
   overflow: hidden;
@@ -855,7 +886,6 @@ section#blog .blog__inner--img img {
 }
 section#blog .blog__inner a.title {
   color: #3B566E;
-  width: 80%;
   transition: 0.2s linear all;
   display: block;
   margin: 0 auto;
@@ -865,7 +895,7 @@ section#blog .blog__inner a.title:hover {
 }
 section#blog .blog__inner p {
   color: #6F8BA4;
-  font-size: 15px;
+  font-size: 14px;
   margin-top: 13px;
   letter-spacing: 1.2px;
 }
@@ -888,6 +918,7 @@ section#blog .blog__inner a.link:hover {
 }
 
 footer {
+  max-width: 100%;
   color: #E5E9F7;
   padding-top: 100px;
   background-color: #585CE9;
@@ -1073,7 +1104,8 @@ section#help .our-mission {
   padding-bottom: 100px;
 }
 section#help .our-mission__img {
-  max-width: 800px;
+  max-width: 100%;
+  width: 800px;
   min-height: 500px;
   overflow: hidden;
 }
@@ -1964,6 +1996,23 @@ section#contact .contact__form-table_send a:hover {
   background-color: #4146e6;
   color: #fff;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 992px) {
+  .solutions--inner {
+    text-align: center;
+  }
+
+  .our-mission__about {
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .cloud__inner-wrapper > div, .design__inner-wrapper > div {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
