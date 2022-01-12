@@ -1,10 +1,11 @@
 section#expands{
-    padding: 100px;
+    padding: 100px 0;
     .expands{
         max-width: 1140px;
         margin: 0 auto;
         &__header{
             &--img{
+                max-width: 100%;
                 width: 730px;
                 height: 400px;
                 position: relative;
@@ -105,7 +106,7 @@ section#expands{
                         margin: 0 auto;
                         display: flex;
                         justify-content: space-between;
-                        font-size: 15px;
+                        font-size: 14px;
                         a{
                             color: $main-color;
                             position: relative;
@@ -147,7 +148,7 @@ section#expands{
                 }
             }
             &--pages{
-                margin-top: 40px;
+                margin: 40px 0;
                 text-align: center;
                 display: flex;
                 justify-content: center;

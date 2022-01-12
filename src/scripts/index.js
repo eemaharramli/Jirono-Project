@@ -87,7 +87,7 @@ function slideNext() {
     else {
         nextImage = active.nextElementSibling.getAttribute('href')
     }
-    
+
     modalImage.setAttribute('src', nextImage)
     active.nextElementSibling.classList.add('active')
 }

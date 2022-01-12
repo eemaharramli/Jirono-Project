@@ -2,18 +2,50 @@
     .solutions--inner{
         text-align: center;
     }
-    .our-mission__about{
-        position: static;
-        transform: none;
-        width: 100%;
+    .solutions__types--wrapper{
+        margin-bottom: 20px;
+    }
+    .our-vision__about{
+        margin-bottom: 20px;
+    }
+    .our-mission__about, .our-vision__about{
+        position: static !important;
+        transform: none !important;
+        width: 100% !important;
+        height: auto !important;
+        transform: none !important;
+    }
+    .expands__header--wrapper-item_info{
+        width: 60% !important;
     }
 }
 
 
+@media only screen and (max-width: 768px){
+    .expands__header--wrapper-item{
+        width: 100% !important;
+    }
+    .features__slider--item{
+        margin-bottom: 20px !important;
+    }
+    .contact__form-table_credentials input, .contact__form-table_text textarea{
+        font-size: 12px;
+    }
+}
 
 
 @media only screen and (max-width:575px){
     .cloud__inner-wrapper > div, .design__inner-wrapper > div{
         width: 100%;
+    }
+    .our-mission__about, .our-vision__about{
+        text-align: center;
+    }
+    .contact__form-table_credentials input, .contact__form-table_text textarea{
+        font-size: 10px;
+    }
+    .name, .email{
+        width: 100% !important;
+        margin-bottom: 10px;
     }
 }
