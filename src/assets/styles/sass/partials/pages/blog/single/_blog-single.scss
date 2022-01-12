@@ -510,11 +510,12 @@ section#features{
         }
         &__slider{
             position: relative;
-       
             .images{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                padding: 10px;
+                background-color: #fff;
                 a{
                     overflow: hidden;
                     width: 200px;
@@ -522,7 +523,7 @@ section#features{
                     border-radius: $border-radius-size;
                     img{
                         object-fit: cover;
-                        max-width: 100%;
+                        width: 100%;
                         max-height: 100%;
                     }
                 }

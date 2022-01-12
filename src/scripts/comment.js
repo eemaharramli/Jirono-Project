@@ -18,7 +18,7 @@ submit.addEventListener('click', (e)=>{
                         ${username.value}
                     </div>
                     <div class="comment-date">
-                        ${new Date().getMinutes()}
+                        ${new Date().toJSON().slice(0,10).replace(/-/g,'/')}
                     </div>
                     <div class="comment-content">
                         <p>

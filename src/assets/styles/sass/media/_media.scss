@@ -31,6 +31,17 @@
     .contact__form-table_credentials input, .contact__form-table_text textarea{
         font-size: 12px;
     }
+    .features__slider .images{
+        flex-direction: column;
+        a{
+            width: 100% !important;
+            height: 200px !important;
+            margin-bottom: 10px;
+            img{
+                width: 100% !important;
+            }
+        }
+    }
 }
 
 
@@ -48,4 +59,5 @@
         width: 100% !important;
         margin-bottom: 10px;
     }
+    
 }

@@ -1481,6 +1481,10 @@ section#questions .questions__img {
 section#questions .questions__img img {
   max-width: 100%;
 }
+section#questions .questions .accordion {
+  color: #6F8BA4 !important;
+  text-align: center;
+}
 section#questions .questions .accordion__item {
   height: 36px;
   -webkit-transition: height 0.3s ease-in-out;
@@ -1489,6 +1493,20 @@ section#questions .questions .accordion__item {
   -o-transition: height 0.3s ease-in-out;
   transition: height 0.3s ease-in-out;
   overflow: hidden;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+section#questions .questions .accordion__item h3 {
+  transition: 0.3s linear;
+  background-color: #697ba2;
+  color: #fff;
+  font-style: 26pd;
+}
+section#questions .questions .accordion__item:hover h3 {
+  cursor: pointer;
+  padding-left: 20px;
+  transition: 0.3s linear;
 }
 section#questions .questions .accordion__item.active {
   -webkit-transition: height 0.3s ease-in-out;
@@ -2447,6 +2465,8 @@ section#features .features__slider .images {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
 }
 section#features .features__slider .images a {
   overflow: hidden;
@@ -2456,7 +2476,7 @@ section#features .features__slider .images a {
 }
 section#features .features__slider .images a img {
   object-fit: cover;
-  max-width: 100%;
+  width: 100%;
   max-height: 100%;
 }
 
@@ -2680,6 +2700,18 @@ form.registration {
 
   .contact__form-table_credentials input, .contact__form-table_text textarea {
     font-size: 12px;
+  }
+
+  .features__slider .images {
+    flex-direction: column;
+  }
+  .features__slider .images a {
+    width: 100% !important;
+    height: 200px !important;
+    margin-bottom: 10px;
+  }
+  .features__slider .images a img {
+    width: 100% !important;
   }
 }
 @media only screen and (max-width: 575px) {
