@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link
             rel="icon"
             type="image/png"
             href="http://demo.tempload.com/jirono/assets/images/favicon/favicon.png"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
     <link
             href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;700;900&display=swap"
             rel="stylesheet"
@@ -30,78 +31,99 @@
 </head>
 <body>
 
-<!--<header>-->
-<!--    <nav>-->
-<!--        <div class="container">-->
-<!--            <div class="row menu">-->
-<!--                <div class="col-2">-->
-<!--                    <div class="logo">-->
-<!--                        <a href="./index.html"><img src="./assets/images/logo/logo-blue.png" alt="jirono logo"/></a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-4">-->
-<!--                    <ul class="menu&#45;&#45;list">-->
-<!--                        <li>-->
-<!--                            <a href="#solutions">Home</a>-->
-<!--                        </li>-->
-<!--                        <li id="menuDiscover" class="menu&#45;&#45;list__discover">-->
-<!--                            <a href="#" class="discover&#45;&#45;link">Discover-->
-<!--                                <ul class="discover&#45;&#45;submenu">-->
-<!--                                    <li>-->
-<!--                                        <a href="#cloud">Features</a>-->
-<!--                                    </li>-->
-<!--                                    <li>-->
-<!--                                        <a href="#design">Our Team</a>-->
-<!--                                    </li>-->
-<!--                                    <li>-->
-<!--                                        <a href="#pricing">Pricing Plans</a>-->
-<!--                                    </li>-->
-<!--                                    <li>-->
-<!--                                        <a href="#blog">Latests Blogs</a>-->
-<!--                                    </li>-->
-<!--                                </ul>-->
-<!--                            </a>-->
-<!--                            <i class="fas fa-caret-down"></i>-->
+<header>
+    <nav class="full-page">
+        <div class="container">
+            <div class="row menu">
+                <div class="col-2">
+                    <div class="logo">
+                        <a href="./index.html"><img src="./assets/images/logo/logo-blue.png" alt="jirono logo"/></a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <ul class="menu--list">
+                        <li>
+                            <a href="#solutions">Home</a>
+                        </li>
+                        <li id="menuDiscover" class="menu--list__discover">
+                            <a href="#" class="discover--link">Discover</a>
+                                <ul class="discover--submenu">
+                                    <li>
+                                        <a href="#cloud">Features</a>
+                                    </li>
+                                    <li>
+                                        <a href="#design">Our Team</a>
+                                    </li>
+                                    <li>
+                                        <a href="#pricing">Pricing Plans</a>
+                                    </li>
+                                    <li>
+                                        <a href="#blog">Latests Blogs</a>
+                                    </li>
+                                </ul>
+                            
+                            <!-- <i class="fas fa-caret-down"></i> -->
 
-<!--                        </li>-->
-<!--                        <li id="menuPages" class="menu-pages">-->
-<!--                            <a href="#">Pages-->
-<!--                                <ul class="discover&#45;&#45;submenu">-->
-<!--                                    <li>-->
-<!--                                        <a href="./about.html">About Us</a>-->
-<!--                                    </li>-->
-<!--                                    <li>-->
-<!--                                        <a href="./features.html">Features</a>-->
-<!--                                    </li>-->
-<!--                                    <li>-->
-<!--                                        <a href="./faq's.html">FAQ's</a>-->
-<!--                                    </li>-->
-<!--                                    <li>-->
-<!--                                        <a href="./blog.html">Blog</a>-->
-<!--                                    </li>-->
-<!--                                </ul>-->
-<!--                            </a>-->
-<!--                            <i class="fas fa-caret-down"></i>-->
-<!--                        </li>-->
-<!--                        <li>-->
-<!--                            <a href="./contact.html">Contact</a>-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </div>-->
-<!--                <div class="col-6 d-flex justify-content-end credentials">-->
-<!--                    <a href="#">sign in</a>-->
-<!--                    <a href="#">sign up</a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </nav>-->
-<!--</header>-->
+                        </li>
+                        <li id="menuPages" class="menu-pages">
+                            <a href="#">Pages</a>
+                                <ul class="discover--submenu">
+                                    <li>
+                                        <a href="./about.html">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="./features.html">Features</a>
+                                    </li>
+                                    <li>
+                                        <a href="./faq's.html">FAQ's</a>
+                                    </li>
+                                    <li>
+                                        <a href="./blog.html">Blog</a>
+                                    </li>
+                                </ul>
+                            
+                            <!-- <i class="fas fa-caret-down"></i> -->
+                        </li>
+                        <li>
+                            <a href="./contact.html" class="menu--list__contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 d-flex justify-content-end credentials">
+                    <a href="#">sign in</a>
+                    <a href="#">sign up</a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </nav>
+    <div class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu-hamburger">
+            <nav>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Discover
+                    <ul>
+                        <li><a href="./blog.html" class="discover">Blog</a></li>
+                    </ul>
+                </a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Contact</a></li>
+            </nav>
+        </div>
+</header>
+
+
 
 <main>
 
     <!-- Section Parallax Blog Single Start -->
 
-    <section id="parallax-blog_single">
+    <section id="parallax-blog_single" data-aos="fade-down" data-aos-duration="2000">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -118,7 +140,7 @@
 
     <!-- Section Expands Start -->
 
-    <section id="features">
+    <section id="features" data-aos="fade-left" data-aos-duration="2000">
         <div class="features">
             <div class="container">
                 <div class="row">
@@ -381,7 +403,12 @@
     </div>
 </footer>
 
+<script src="./scripts/header.js"></script>
 <script src="./scripts/slider.js"></script>
 <script src="./scripts/comment.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>

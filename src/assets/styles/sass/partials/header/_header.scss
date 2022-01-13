@@ -1,13 +1,29 @@
 header {
+    padding-right: 10px;
     display: block;
-    max-width: 1140px;
     margin: 0 auto;
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100vw;
     height: 80px;
     align-items: center;
     z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: $border-radius-size;
+    // transition: .3s linear all;
+    > nav{
+        margin: 0 auto;
+        max-width: 1140px;
+        height: 100%;
+        > div{
+            height: 100%;
+        }
+    }
     .menu {
+        height: 100%;
         align-items: center;
+        justify-content: space-between;
         .logo:hover {
             cursor: pointer;
         }
@@ -18,7 +34,7 @@ header {
             li {
                 font-size: 14px;
                 color: $li-color;
-                transition: 0.3s color linear;
+                margin-right: 20px;
                 a {
                     color: #3b566e;
                 }
@@ -26,24 +42,40 @@ header {
                     cursor: pointer;
                 }
             }
-            li.menu--list__discover:hover ul.discover--submenu{
-                transform: translateY(0);
-                opacity: 1;
+
+            li.discover{
+                padding-top: 20px;
             }
-            li.menu-pages:hover ul.discover--submenu{
-                transform: translateY(0);
-                opacity: 1;
+            li.menu--list__discover:hover{
+                > ul.discover--submenu{
+                    transform: translateY(0);
+                    opacity: 1;
+                    visibility: visible;
+                    z-index: 5;
+                }
+            }
+            
+            li.menu-pages:hover{
+                > ul.discover--submenu{
+                    transform: translateY(0);
+                    opacity: 1;
+                    visibility: visible;
+                    z-index: 5;
+                }
+            }
+            
+            li.menu--list__contact{
+                position: relative;
             }
             ul {
-                margin-top: 10px;
                 position: absolute;
                 padding-left: 0;
-                transition: 0.3s linear all;
+                transition: all .3s ease;
                 opacity: 0;
-                transform: translateY(-30%);
-                transition: .35s ease-in-out all;
-                height: 150%;
-                li {
+                transform: translateY(-40%);
+                z-index: -1;
+                visibility: hidden;
+                > li {
                     position: relative;
                     width: 200px;
                     margin-bottom: 1px;
@@ -51,14 +83,16 @@ header {
                     padding-bottom: 10px;
                     padding-left: 10px;
                     background-color: #fff;
-                    transition: 0.2s linear all;
+                    // transition: 2s linear all;
                     border-bottom: 1px solid #f5f5f5;
                     a {
                         color: #3b566e;
+                        display: block;
                     }
                     &:hover {
                         padding-left: 14px;
                         background-color: #f5f5f5;
+                          transition: all .3s ease;
                     }
                     &::before {
                         content: "";
@@ -73,6 +107,7 @@ header {
                         width: 3px;
                     }
                 }
+
             }
         }
         .credentials a {
@@ -90,4 +125,74 @@ header {
             }
         }
     }
+}
+
+header.fixed{
+    background-color: #ffffff;
+    position: fixed;
+    height: 80px;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: 0;
+}
+
+.navbar-toggler.collapsed .close-icon {
+    display: none;
+}
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+    display: inline;
+}
+
+.menu-hamburger{
+    transform: translateY(-200%);
+    transition: .3s linear all;
+}
+
+.menu-hamburger.active{
+    transform: translateY(0);
+}
+
+/* Гамбургер иконка */
+.menu-btn {
+    // width: 30px;
+    height: 30px;
+    position: relative;
+    z-index:2;
+    overflow: hidden;
+    text-align: right;
+    display: none;
+    justify-content: end;
+}
+
+.menu-btn span {
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(-50%, -50%);
+    background-color: #222222;
+    transition: all 0.5s;
+}
+
+.menu-btn span:nth-of-type(2) {
+ top: calc(50% - 5px);
+}
+.menu-btn span:nth-of-type(3) {
+ top: calc(50% + 5px);
+}
+
+/* Меняем гамбургер иконку, когда меню открыто */
+.menu-btn.active span:nth-of-type(1) {
+ display: none;
+}
+.menu-btn.active span:nth-of-type(2) {
+ top: 50%;
+ transform: translate(-50%, 0%) rotate(45deg);
+}
+.menu-btn.active span:nth-of-type(3) {
+ top: 50%;
+ transform: translate(-50%, 0%) rotate(-45deg);
 }

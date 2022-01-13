@@ -1,15 +1,14 @@
 #solutions {
-    position: relative;
-    z-index: 1;
     overflow: hidden;
     max-width: 100%;
+    padding-top: 50px;
 }
 .solutions {
     max-width: 1140px;
     margin: 0 auto;
     margin-top: 50px;
     padding-bottom: 70px;
-    z-index: 2;
+    // z-index: 2;
     position: relative;
     .solutions--inner {
         padding-top: 100px;
@@ -190,7 +189,7 @@ section#solutions .circle{
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: -1;
     img{
         fill: green
     }
